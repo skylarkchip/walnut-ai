@@ -15,6 +15,8 @@ import { useParams, useSearchParams } from "react-router-dom";
 import { v4 } from "uuid";
 import { canvasActions } from "../../redux/slices/canvas";
 
+pdfjs.GlobalWorkerOptions.workerSrc = "pdf.worker.min.js";
+
 const EditorCanvas = () => {
   const dispatch = useDispatch();
   const file = useSelector((state) => state.file.file);
