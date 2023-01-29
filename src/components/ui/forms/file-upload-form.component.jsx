@@ -36,6 +36,7 @@ const FileUploadForm = () => {
             {formik.values.files &&
               formik.values.files.map((file) => (
                 <Text
+                  key={file.id}
                   fontFamily="primary"
                   textAlign="left"
                 >{`Uploaded File: ${file.name}`}</Text>
