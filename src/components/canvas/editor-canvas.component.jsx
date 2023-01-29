@@ -9,7 +9,7 @@ import {
   Tag as KonvaTag,
   Label as KonvaLabel,
 } from "react-konva";
-import { pdfjs } from "react-pdf/dist/esm/entry.webpack5";
+import { pdfjs } from "react-pdf";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useSearchParams } from "react-router-dom";
 import { v4 } from "uuid";
