@@ -1,15 +1,13 @@
 import React from "react";
 import {
   Box,
-  FormLabel,
   Icon,
   IconButton,
   Input,
   InputGroup,
   InputRightElement,
-  Text,
 } from "@chakra-ui/react";
-import { ErrorMessage, Field, Formik } from "formik";
+import { Field, Formik } from "formik";
 import { HiPlus } from "react-icons/hi";
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
@@ -25,7 +23,6 @@ const AddLabelForm = ({ setLabels }) => {
         label: Yup.string().required("Label must not be blank"),
       })}
       onSubmit={(values, { resetForm }) => {
-        // setLabels((prevState) => [...prevState, values.label]);
         const uuid = v4();
         dispatch(
           labelsAction.addLabel({
@@ -55,14 +52,6 @@ const AddLabelForm = ({ setLabels }) => {
               />
             </InputRightElement>
           </InputGroup>
-          {/* <ErrorMessage
-            name="label"
-            render={(msg) => (
-              <Text fontSize="xs" color="red">
-                {msg}
-              </Text>
-            )}
-          /> */}
         </Box>
       )}
     </Formik>

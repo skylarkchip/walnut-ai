@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Box,
   Flex,
@@ -7,9 +8,8 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React, { useEffect } from "react";
 import { HiChevronLeft } from "react-icons/hi";
-import { redirect, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 // Redux
 import { useDispatch, useSelector } from "react-redux";
@@ -22,7 +22,6 @@ import AddLabelForm from "../components/ui/forms/add-label-form.component";
 import LabelList from "../components/ui/list/label-list.component";
 import BoxList from "../components/ui/list/box-list.component";
 import { useExistingBoundingBox } from "../hooks/checkExistingBoundingBox";
-import { Image as KonvaImage } from "react-konva";
 
 const EditorPage = () => {
   const dispatch = useDispatch();
@@ -33,12 +32,6 @@ const EditorPage = () => {
   const params = useParams();
 
   const { isExisting, boundingBox } = useExistingBoundingBox(params.id);
-
-  // useEffect(() => {
-  //   if (files === null) {
-  //     return redirect("/");
-  //   }
-  // }, [files]);
 
   const onReturnNavigationHandler = () => {
     dispatch(fileActions.removeFile());

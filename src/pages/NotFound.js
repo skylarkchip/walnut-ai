@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Flex, Heading, Icon, VStack } from "@chakra-ui/react";
+import { Flex, Heading, Icon, VStack } from "@chakra-ui/react";
 import { VscDebugDisconnect } from "react-icons/vsc";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../components/ui/buttons/custom-button.component";

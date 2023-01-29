@@ -1,22 +1,11 @@
 import React, { useState } from "react";
-import {
-  Flex,
-  Icon,
-  IconButton,
-  Link,
-  Td,
-  Text,
-  Tr,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Flex, Icon, IconButton, Td, Text, Tr } from "@chakra-ui/react";
 import { HiOutlinePencilAlt, HiOutlineTrash } from "react-icons/hi";
-import { Link as ReactRouterLink } from "react-router-dom";
 import EditModal from "../modals/edit-modal.component";
 import DeleteAlertDialog from "../modals/delete-alert-dialog.component";
 
 const TableDataRow = (props) => {
   const { box } = props;
-  const { onOpen, isOpen, onClose } = useDisclosure();
   const [isEditOpen, setIsEditOpen] = useState(false);
   const [isDeleteOpen, setIsDeleteOpen] = useState(false);
 

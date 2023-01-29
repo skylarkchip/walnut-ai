@@ -7,7 +7,6 @@ import {
   AccordionPanel,
   Box,
   Flex,
-  Heading,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -22,7 +21,7 @@ const LabelList = () => {
   const labels = useSelector((state) => state.labels.labels);
 
   return (
-    <Flex w="full" flexDirection="column" rowGap="4" px="2">
+    <Flex w="full" flexDirection="column" rowGap="4">
       <Accordion
         allowToggle
         defaultIndex={[0]}

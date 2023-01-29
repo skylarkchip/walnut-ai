@@ -13,7 +13,6 @@ import { pdfjs } from "react-pdf/dist/esm/entry.webpack5";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useSearchParams } from "react-router-dom";
 import { v4 } from "uuid";
-import { useExistingBoundingBox } from "../../hooks/checkExistingBoundingBox";
 import { canvasActions } from "../../redux/slices/canvas";
 
 const EditorCanvas = () => {
@@ -25,7 +24,6 @@ const EditorCanvas = () => {
   const [totalPages, setTotalPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [images, setImages] = useState([]);
-  const [imageUrl, setImageUrl] = useState("");
   const [isDocumentLoading, setIsDocumentLoading] = useState(false);
   const [rect, setRect] = useState({
     x: 0,
