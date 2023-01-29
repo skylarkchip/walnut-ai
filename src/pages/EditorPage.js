@@ -22,6 +22,7 @@ import AddLabelForm from "../components/ui/forms/add-label-form.component";
 import LabelList from "../components/ui/list/label-list.component";
 import BoxList from "../components/ui/list/box-list.component";
 import { useExistingBoundingBox } from "../hooks/checkExistingBoundingBox";
+import InstructionModal from "../components/ui/modals/instruction-modal.component";
 
 const EditorPage = () => {
   const dispatch = useDispatch();
@@ -83,6 +84,7 @@ const EditorPage = () => {
           </VStack>
         </Box>
       </Stack>
+      <InstructionModal />
     </Flex>
   );
 };
